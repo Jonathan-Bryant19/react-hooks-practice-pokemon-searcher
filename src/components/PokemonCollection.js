@@ -2,10 +2,10 @@ import React from "react";
 import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 
-function PokemonCollection( {pokeData} ) {
+function PokemonCollection( {searchedPoke} ) {
   
-const pokeCard = pokeData.map( card => {
-  return <PokemonCard name={card.name} front={card.sprites.front} back={card.sprites.back} hp={card.hp}/>
+const pokeCard = searchedPoke.map( card => {
+  return <PokemonCard key={card.id} name={card.name} front={card.sprites.front} back={card.sprites.back} hp={card.hp}/>
 })
 
   
